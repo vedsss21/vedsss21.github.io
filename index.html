@@ -600,10 +600,10 @@ footer{
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">View Projects</a>
         <a href="#contact" class="btn-outline">Get In Touch</a>
-        <button onclick="openResume()" class="btn-outline" style="display:flex;align-items:center;gap:7px;cursor:pointer;font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;">
+        <a href="resume.pdf" target="_blank" class="btn-outline" style="display:flex;align-items:center;gap:7px;">
           <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           Resume
-        </button>
+        </a>
       </div>
       <div class="hero-socials">
         <a href="https://www.linkedin.com/in/vedha-degave-b43008342" target="_blank" title="LinkedIn">
@@ -953,9 +953,9 @@ drawParticles();
 function openResume(){
   const overlay = document.getElementById('resume-overlay');
   const frame = document.getElementById('resumeFrame');
-  if(!overlay || !frame) { window.open('https://vedsss21.github.io/resume.pdf','_blank'); return; }
-  if(frame.src !== 'https://vedsss21.github.io/resume.pdf') {
-    frame.src = 'https://vedsss21.github.io/resume.pdf';
+  if(!overlay || !frame) { window.open('resume.pdf','_blank'); return; }
+  if(frame.src !== 'resume.pdf') {
+    frame.src = 'resume.pdf';
   }
   overlay.style.display = 'flex';
   document.body.style.overflow = 'hidden';
@@ -987,7 +987,7 @@ document.addEventListener('keydown', e => {
       </button>
       <div class="resume-title">Vedha Santosh <span>Degave</span> — Resume</div>
     </div>
-    <a href="https://vedsss21.github.io/resume.pdf" download="Vedha_Santosh_Degave_Resume.pdf" class="resume-download">
+    <a href="resume.pdf" download="Vedha_Santosh_Degave_Resume.pdf" class="resume-download">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
       Download PDF
     </a>
